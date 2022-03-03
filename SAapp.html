@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <h1>書籍検索</h1>
+      クエリを入力してください
+      <script language="javascript">
+       function check() {
+        var param = document.form1.param1.value;
+        if(param == '') {
+          alert("クエリを入力してください");
+          return false;
+        }
+        return true;
+       }
+
+    </script>
+  <form name="form1" action="/cgi-bin/SAapp.py" method="POST">
+        <input type="text" name="param1" />
+        <button type="submit" name="submit" onclick="return check();">submit</button>
+  </form>
+  </body>
+</html>
